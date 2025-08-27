@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>INPUT DATA KE SPREADSHEET</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f0f8ff, #d0eaff);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #judul-form {
+      font-style: italic;
+      opacity: 0.9;
+      font-weight: 500;
+      font-size: 13px;
+      color: #444;
+      margin-bottom: 20px;
+      text-align: center;
+      max-width: 480px;
+      padding: 0 10px;
+    }
+
+    #form-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 480px;
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 16px;
+        padding: 30px 25px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        z-index: 10;
+    }
+
+
+    #form-container h2 {
+      text-align: center;
+      color: #1e90ff;
+      margin-bottom: 30px;
+      font-weight: 600;
+      font-size: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #444;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 11px 14px;
+      margin-bottom: 22px;
+      border: 1.5px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #1e90ff;
+      background-color: #fff;
+      outline: none;
+      box-shadow: 0 0 6px rgba(30, 144, 255, 0.2);
+    }
+
+    input[type="submit"] {
+      background: linear-gradient(to right, #1e90ff, #00bfff);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px;
+      width: 100%;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background: linear-gradient(to right, #007acc, #00aaff);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 191, 255, 0.3);
+    }
+
+    #footer {
+      margin-top: 0px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 500;
+      color: #444;
+      font-style: italic;
+      opacity: 0.9;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 600px) {
+      #form-container {
+        padding: 25px 20px;
+      }
+
+      #form-container h2 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="form-container">
+  <div id="judul-form">
+    SILAHKAN MENGISI DATA PEMINJAMAN KENDARAAN
+  </div>
+  <h2>FORM PEMINJAMAN KENDARAAN</h2>
+    <form action="https://script.google.com/macros/s/AKfycbxlO6bYqN0PCqRi8RwsT7OJS3bi1c8q26QSJE6Dc0-SDWVpX7Z18jXt2HBrF4hd-DQ4/exec" method="post">
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" required />
+
+      <label for="tipe_kendaraan">Tipe Kendaraan:</label>
+      <select id="tipe_kendaraan" name="tipe_kendaraan" required>
+        <option value="">-- Pilih Tipe Kendaraan --</option>
+        <option>L300 S 8339 UH</option>
+        <option>L300 (S 8049 UF)</option>
+        <option>L300 (S 8053 UF)</option>
+        <option>L300 (S 9989 UF)</option>
+        <option>L300 (S 9796 UE)</option>
+        <option>L300 (S 9374 HF)</option>
+        <option>L300 REMBANG (S 8914 UH)</option>
+        <option>T 120 SS (S 8285 HM)</option>
+        <option>ISUZU TBR54 (S 9392 HH)</option>
+        <option>ISUZU TBR55 (S 9668 HD)</option>
+        <option>ISUZU TBR56 (S 8780 UE)</option>
+        <option>ISUZU TRAGA (S 9950 UF)</option>
+        <option>MITSUBISHI TRUCK (SS 9004 UF)</option>
+        <option>MITSUBISHI TRUCK (S 9592 UF)</option>
+        <option>MITSUBISHI TRUCK (S 8149 UH)</option>
+        <option>MITSUBISHI TRUCK (S 9212 HG)</option>
+        <option>MITSUBISHI TRUCK (S 8387 UF)</option>
+        <option>MITSUBISHI TRUCK (S 8457 UF)</option>
+        <option>CIVIC (S 805 TI)</option>
+        <option>HONDA MOBILIO (S 1659 UE)</option>
+        <option>INNOVA (S 1430 FD)</option>
+        <option>PAJERO (S 1140 GH)</option>
+        <option>VESPA (S 2339 EM)</option>
+        <option>VESPA LX (S 6979 EAK)</option>
+        <option>YAMAHA STYLO()</option>
+        <option>YAMAHA N-MAX (S 2598 IJ)</option>
+        <option>YAMAHA MIO (S 6468 H)</option>
+        <option>ISUZU TRUCK (D 8382 SN)</option>
+        <option>ISUZU MOBIL (BOX DK 8230)</option>
+        <option>SEPEDA MOTOR HONDA(BERMASALAH) (S 2531 EC)</option>
+      </select>
+
+      <label for="nomor_wa">Nomor WA:</label>
+      <input type="tel" id="nomor_wa" name="nomor_wa" placeholder="628xxxxxxxxxx" pattern="[0-9]{10,15}" required />
+
+      <label for="tanggal_peminjaman">Tanggal Peminjaman:</label>
+      <input type="date" id="tanggal_peminjaman" name="tanggal_peminjaman" required />
+
+      <div id="footer">
+        PERIKSA KEMBALI DATA ANDA AGAR PROSES BERJALAN LANCAR.
+      </div>
+
+      <input type="submit" value="Simpan Data" />
+    </form>
+  </div>
+</body>
+
+</html>
